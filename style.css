@@ -1,0 +1,106 @@
+/* Set up the whole body */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, white); /* Light orange to dark orange gradient */
+}
+
+/* Container for the login form */
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Input fields */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect on input */
+.input-group input:focus {
+    border-color: silver; /* Orange border on focus */
+    outline: none;
+}
+
+/* Login button */
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #ff8c00; /* Orange color for the button */
+    color: white;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-box {
+    background-color: black;
+    color: white;
+}
+
+.google-box{
+    background-color: red, white;
+    color: white;
+    margin-top: 10px;
+}
+.linkedin-box{
+    background-color: blue, white;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Button transition effect */
+button {
+    transition: background-color 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+/* Hover effect on button */
+button:hover {
+    background-color: silver; /* Dark orange when hovered */
+    opacity: 0.8;
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #ff8c00; /* Orange color for the link */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
