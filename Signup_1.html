@@ -1,0 +1,299 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f2f4f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 900px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+
+    .sidebar {
+      width: 30%;
+      background-color: #fafafa;
+      padding: 20px;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+
+    .step-indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
+.step {
+  position: relative;
+  padding: 12px 20px;
+  border-left: 4px solid transparent;
+  font-size: 16px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff8c00;
+  font-weight: bold;
+  color: #ff8c00;
+  box-shadow: inset 2px 0 0 #ff8c00;
+  border-radius: 4px;
+}
+
+
+    .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0 25px;
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 12px;
+}
+
+    .sidebar ul li {
+      margin: 20px 0;
+      font-weight: 600;
+      color: black;
+    }
+
+    .form-container {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: #fafafa;
+    }
+
+    .gender-options {
+      margin: 15px 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .gender-options label {
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    .gender-options input[type="radio"] {
+      margin-right: 6px;
+    }
+
+    .next-button {
+      width: 100%;
+      padding: 14px;
+      background-color: #ff8c00;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.2s ease;
+    }
+
+    .next-button:hover {
+      background-color: #e57a00;
+    }
+
+    .next-button img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .separator {
+      text-align: center;
+      margin: 30px 0 15px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .social-buttons img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .social-buttons img:hover {
+      transform: scale(1.1);
+    }
+
+    .login-link {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      text-decoration: none;
+      color: #ff8c00;
+      font-weight: bold;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+      }
+
+      .sidebar ul li {
+        display: inline-block;
+        margin: 10px 15px;
+      }
+
+      .form-container {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px;
+      }
+
+      input, .next-button {
+        font-size: 14px;
+      }
+
+      .social-buttons {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <div class="step-indicator">
+          <div class="step active">1. Basic Information</div>
+          <div class="step">2. Skills</div>
+          <div class="step">3. Preferences</div>
+        </div>
+      </div>
+      
+
+    <div class="form-container">
+      <h2>Create your account</h2>
+      <form method="post">
+      <input type="email" required placeholder="Email address" />
+      <input type="password" required  placeholder="Password" />
+      <input type="password" required placeholder="Confirm your Password" />
+      <input type="text" required placeholder="First Name" />
+      <input type="text" required placeholder="Last Name" />
+      <input type="date" required placeholder="Date of birth" />
+
+      <div class="gender-options">
+        <p>Enter your gender (Optional):</p>
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+      </div>
+
+      <button class="next-button">
+        Next <img src="./assets/arrowblack.png" alt="arrow" />
+      </button>
+
+      <div class="separator">
+        <span>Or Signup using</span>
+      </div>
+      
+
+      <div class="social-buttons">
+        <img src="./assets/google.png" alt="Google" />
+        <!-- <img src="./assets/apple.png" alt="Apple" /> -->
+        <img src="./assets/linkedin.png" alt="LinkedIn" />
+      </div>
+
+      <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
+
