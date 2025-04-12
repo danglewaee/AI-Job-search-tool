@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/" method="POST">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-box">Login</button>
+        </form>
+
+        <div class="separator">
+            <span>Or login using</span>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons">
+            <!-- Login with Google -->
+            <a href="{{ url_for('login_google') }}">
+                <img src="{{ url_for('static', filename='images/google.png') }}" alt="Google Logo" class="social-logo">
+            </a>
+
+            <!-- Login with LinkedIn -->
+            <a href="{{ url_for('login_linkedin') }}">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn Logo" class="social-logo">
+            </a>
+        </div>
+        
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+</body>
+</html>
